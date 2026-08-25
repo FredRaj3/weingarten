@@ -50,8 +50,8 @@
   "tasks": [
     {
       "board": "WeingartenFundamental",
-      "id": "unposted",
-      "taskUrl": "unposted",
+      "id": "01a03b35-9d63-7119-9bb4-a0518bd5bd93",
+      "taskUrl": "https://problem.market/tasks/01a03b35-9d63-7119-9bb4-a0518bd5bd93",
       "title": "The fundamental theorem of Weingarten calculus",
       "statementFile": "WeingartenFundamental.lean",
       "theorem": "WeingartenFundamental.weingarten_fundamental",
@@ -59,8 +59,8 @@
     },
     {
       "board": "SymmetricGroupCount",
-      "id": "unposted",
-      "taskUrl": "unposted",
+      "id": "01a03b35-e485-76d3-b45d-349923ca4be8",
+      "taskUrl": "https://problem.market/tasks/01a03b35-e485-76d3-b45d-349923ca4be8",
       "title": "Weingarten integrals of the symmetric group, denominators cleared",
       "statementFile": "SymmetricGroupCount.lean",
       "theorem": "SymmetricGroupCount.weingarten_symmetric",
@@ -68,8 +68,8 @@
     },
     {
       "board": "GramInvertibility",
-      "id": "unposted",
-      "taskUrl": "unposted",
+      "id": "01a03b36-31e8-7454-8112-e05d575a5133",
+      "taskUrl": "https://problem.market/tasks/01a03b36-31e8-7454-8112-e05d575a5133",
       "title": "The Weingarten Gram matrix is invertible in the stable range",
       "statementFile": "GramInvertibility.lean",
       "theorem": "GramInvertibility.wgGram_isUnit",
@@ -77,8 +77,8 @@
     },
     {
       "board": "WeingartenUnitary",
-      "id": "unposted",
-      "taskUrl": "unposted",
+      "id": "01a03b36-8829-76d4-9ea4-95363f700b06",
+      "taskUrl": "https://problem.market/tasks/01a03b36-8829-76d4-9ea4-95363f700b06",
       "title": "The explicit unitary Weingarten formula",
       "statementFile": "WeingartenUnitary.lean",
       "theorem": "WeingartenUnitary.weingarten_unitary",
