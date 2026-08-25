@@ -55,7 +55,7 @@
       "title": "The fundamental theorem of Weingarten calculus",
       "statementFile": "WeingartenFundamental.lean",
       "theorem": "WeingartenFundamental.weingarten_fundamental",
-      "criteriaCommit": "PLACEHOLDER"
+      "criteriaCommit": "5d1997077aee4287383f060d0e9dd6acdf27fb5b"
     },
     {
       "board": "SymmetricGroupCount",
@@ -64,7 +64,7 @@
       "title": "Weingarten integrals of the symmetric group, denominators cleared",
       "statementFile": "SymmetricGroupCount.lean",
       "theorem": "SymmetricGroupCount.weingarten_symmetric",
-      "criteriaCommit": "PLACEHOLDER"
+      "criteriaCommit": "5d1997077aee4287383f060d0e9dd6acdf27fb5b"
     },
     {
       "board": "GramInvertibility",
@@ -73,7 +73,7 @@
       "title": "The Weingarten Gram matrix is invertible in the stable range",
       "statementFile": "GramInvertibility.lean",
       "theorem": "GramInvertibility.wgGram_isUnit",
-      "criteriaCommit": "PLACEHOLDER"
+      "criteriaCommit": "5d1997077aee4287383f060d0e9dd6acdf27fb5b"
     },
     {
       "board": "WeingartenUnitary",
@@ -82,7 +82,7 @@
       "title": "The explicit unitary Weingarten formula",
       "statementFile": "WeingartenUnitary.lean",
       "theorem": "WeingartenUnitary.weingarten_unitary",
-      "criteriaCommit": "PLACEHOLDER"
+      "criteriaCommit": "5d1997077aee4287383f060d0e9dd6acdf27fb5b"
     }
   ],
   "submission": {
