@@ -1,0 +1,3 @@
+.lake/
+.axiom_check_*.lean
+axiom-report-*.txt

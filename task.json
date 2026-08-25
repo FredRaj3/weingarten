@@ -1,0 +1,93 @@
+{
+  "$comment": "Machine-readable form of TASK.md. Single-board repository; see `tasks`.",
+  "board": "weingarten",
+  "title": "Weingarten calculus in Lean",
+  "platform": "problem.market",
+  "tier": "proof",
+  "status": "open",
+  "prover": "lean4",
+  "toolchain": "leanprover/lean4:v4.34.0-rc1",
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "scope": "leanprover-community",
+      "rev": "v4.34.0-rc1"
+    }
+  ],
+  "additionalDependenciesAllowed": false,
+  "prerequisites": {
+    "tools": [
+      "elan",
+      "git",
+      "python3"
+    ],
+    "freeDiskGB": 8
+  },
+  "statementLocked": true,
+  "winConditions": {
+    "statementUnchanged": true,
+    "buildsClean": true,
+    "allowedAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "forbidden": [
+      "sorry",
+      "admit",
+      "native_decide"
+    ]
+  },
+  "protectedPaths": [
+    ".github/"
+  ],
+  "preflight": "./preflight.sh",
+  "selfCheck": "./verify.sh <Board>",
+  "setup": [
+    "lake exe cache get"
+  ],
+  "$comment_tasks": "One entry per board. criteriaCommit is the commit the posted task pins; the statement is compared against it, not against main. id/taskUrl are filled when the board is posted.",
+  "tasks": [
+    {
+      "board": "WeingartenFundamental",
+      "id": "unposted",
+      "taskUrl": "unposted",
+      "title": "The fundamental theorem of Weingarten calculus",
+      "statementFile": "WeingartenFundamental.lean",
+      "theorem": "WeingartenFundamental.weingarten_fundamental",
+      "criteriaCommit": "PLACEHOLDER"
+    },
+    {
+      "board": "SymmetricGroupCount",
+      "id": "unposted",
+      "taskUrl": "unposted",
+      "title": "Weingarten integrals of the symmetric group, denominators cleared",
+      "statementFile": "SymmetricGroupCount.lean",
+      "theorem": "SymmetricGroupCount.weingarten_symmetric",
+      "criteriaCommit": "PLACEHOLDER"
+    },
+    {
+      "board": "GramInvertibility",
+      "id": "unposted",
+      "taskUrl": "unposted",
+      "title": "The Weingarten Gram matrix is invertible in the stable range",
+      "statementFile": "GramInvertibility.lean",
+      "theorem": "GramInvertibility.wgGram_isUnit",
+      "criteriaCommit": "PLACEHOLDER"
+    },
+    {
+      "board": "WeingartenUnitary",
+      "id": "unposted",
+      "taskUrl": "unposted",
+      "title": "The explicit unitary Weingarten formula",
+      "statementFile": "WeingartenUnitary.lean",
+      "theorem": "WeingartenUnitary.weingarten_unitary",
+      "criteriaCommit": "PLACEHOLDER"
+    }
+  ],
+  "submission": {
+    "method": "pull-request",
+    "repository": "https://github.com/FredRaj3/weingarten",
+    "license": "Apache-2.0"
+  }
+}

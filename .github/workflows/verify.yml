@@ -1,0 +1,30 @@
+name: verify
+on:
+  push: {branches: [main]}
+  pull_request:
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}   # the statement check needs the criteria commit
+      - name: Install elan
+        run: |
+          curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+      - name: Verify
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            # A pull request is judged on the boards it touches — one per PR by convention.
+            boards=$(git diff --name-only "origin/${{ github.base_ref }}"...HEAD \
+              | grep -E '\.lean$' | while read -r f; do awk -F'\t' -v f="$f" '$2==f{print $1}' boards.tsv; done | sort -u)
+            if [ -z "$boards" ]; then
+              echo "This pull request changes no statement file; nothing to verify. Name the board's .lean file."; exit 1
+            fi
+            rc=0; for b in $boards; do ./verify.sh "$b" || rc=1; done; exit $rc
+          else
+            ./verify.sh   # all boards; fails on main by design while they are open
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: axiom-reports, path: axiom-report-*.txt}
